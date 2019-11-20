@@ -28,14 +28,16 @@ public class Magpie3 {
 	public String getResponse(String statement) {
 		String response = "";
 		if (statement.length() == 0) {
-			response = "Say something, please.";
+			response = "Say something for god's sake man!";
 		} else if (findKeyword(statement, "no") >= 0) {
-			response = "Why so negative?";
+			response = "bruh...";
 		} else if (findKeyword(statement, "mother") >= 0
 				|| findKeyword(statement, "father") >= 0
 				|| findKeyword(statement, "sister") >= 0
 				|| findKeyword(statement, "brother") >= 0) {
 			response = "Tell me more about your family.";
+		} else if (findKeyword(statement, "joe") >= 0) {
+			response = "Yea that dude's a toal chump.";
 		} else {
 			response = getRandomResponse();
 		}
